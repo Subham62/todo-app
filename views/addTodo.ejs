@@ -1,0 +1,26 @@
+<%- include("./partials/header") %> 
+    
+    <div class="mb-10 ">
+
+        <h1 class="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-2xl dark:text-white text-center mt-2">Add Todo</h1>
+        
+        <a href="/" style="margin-left: 25vw" class="  px-5 py-3  font-medium  text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            Back
+        </a>
+    </div>
+    <form class="max-w-sm mx-auto" action="/addTodo" method="POST">
+        <div class="mb-5">
+            <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
+            <input type="text" name="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Type todo here"  />
+        </div>
+        <div class="mb-5">
+            <label for="desc" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+            <input type="text" name="desc" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Type description here" />
+        </div>
+        
+        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
+    </form>
+<%- include("./partials/footer") %>  
+
+<!-- NOTE:->  "for" inside <lable> that shows the url query through which data is being extracted and store in the mongoDb   AND this(name) should match with model schema for less complexity-->
+<!-- botton here send the title and description data to the url -->

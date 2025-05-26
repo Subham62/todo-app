@@ -1,1 +1,4 @@
 /node_modules
+# /views/partials
+# *.ejs
+# .env
